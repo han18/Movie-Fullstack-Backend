@@ -1,22 +1,27 @@
-//this is to add users route to the frontend for login and signup
 import { Router } from "express";
 
 const router = new Router();
 
-// sign in users to watch movies
+/**
+ * POST /signin
+ */
 router.post("/signin", async (req, res) => {
-  //check if user exist, then check if password is a match
-  // send the db to the user to serf the movies
-  const user = { _id: "1", email: "alex@gmail", userName: "alex123" };
-  res.json();
+  // check if user exist
+  // check if password is a match
+  // send the db user
+  const user = { _id: "1", email: "alex@gmail.com", userName: "alex123" };
+  res.json(user);
 });
 
-// sign up user to watch movies
+/**
+ * POST /signup
+ */
 router.post("/signup", async (req, res) => {
-  // check email is not in db, create a new user
+  // check email is not in db
+  // create a new user in db
   // send the new user
-  const user = { _id: "1", email: "alex@gmail", userName: "alex123" };
-  res.json();
+  const user = { _id: "1", email: "alex@gmail.com", userName: "alex123" };
+  res.json(user);
 });
 
 export default router;
