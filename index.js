@@ -21,7 +21,7 @@ app.use("/api/movies", moviesRouter);
 app.use("/api/users", usersRouter);
 
 app.get("/", (req, res) => {
-  res.send("backend...");
+  res.send("this is the backend...");
 });
 
 app.listen(PORT, () => {
